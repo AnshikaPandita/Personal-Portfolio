@@ -1,0 +1,360 @@
+/* CSS Resets and Variables */
+:root {
+    --font-family: "Roboto", sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+/* Navbar Styling */
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    color: var(--primary-color);
+}
+
+nav a {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+
+nav ul li {
+    font-weight: var(--font-weight-bold);
+}
+
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+}
+
+.hero-img {
+    height: auto;
+    max-width: 100%;
+}
+
+.bio {
+    width: 100%;
+    max-width: 25rem;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+    background-color: #fff;
+}
+
+.bio h2 {
+    margin-bottom: var(--bottom-margin);
+    color: var(--primary-color);
+}
+
+.bio-text {
+    line-height: var(--line-height);
+    padding: 0.4rem 0;
+}
+
+/* More About Me Section Styling */
+.more-about {
+    background-color: var(--bg-color);
+    padding: 2rem 1rem;
+}
+
+.more-about h2 {
+    margin-bottom: var(--bottom-margin);
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.more-about p {
+    line-height: var(--line-height);
+    padding: 0.4rem 0;
+}
+
+/* Skills Section Styling */
+.skills {
+    padding: 2rem 0;
+    background-color: var(--bg-color);
+}
+
+.skill-header {
+    text-align: center;
+    margin-bottom: var(--bottom-margin);
+    color: var(--primary-color);
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.icon-card {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+}
+
+.icon {
+    max-width: 60%;
+    height: auto;
+}
+
+/* Projects Section Styling */
+.projects {
+    background-color: var(--bg-color);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.projects-title {
+    margin-bottom: var(--bottom-margin-2);
+    color: var(--primary-color);
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-card {
+    flex: 1;
+    max-width: 30rem;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.project-title {
+    margin-bottom: var(--bottom-margin);
+    color: var(--primary-color);
+}
+
+.project-details {
+    line-height: var(--line-height);
+    padding: 0.4rem 0;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    border-bottom: none;
+}
+
+/* Contact Section Styling */
+.contact {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: var(--bottom-margin-2);
+    color: var(--primary-color);
+}
+
+.contact-form-container {
+    max-width: 40.75rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    background-color: #fff;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.form-control label {
+    line-height: 2.7em;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    font-size: 0.875rem;
+    outline: none;
+}
+
+.input-field::placeholder {
+    color: var(--primary-color);
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Social accounts - Fixed to the right */
+#social-accounts {
+    position: fixed;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+/* Scroll to top button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+/* Add this to your existing CSS or your stylesheet */
+.form-disabled-note {
+    color: grey;
+    font-size: 14px;
+    text-align: center;
+}
+
+#scroll-to-top:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Social accounts styling */
+#social-accounts {
+position: fixed;
+top: 50%;
+right: 1rem;
+transform: translateY(-50%);
+z-index: 2; /* Ensure the icons are above other elements */
+}
+
+.social-icons {
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.social-icons li {
+margin-bottom: 1rem;
+}
+
+.social-icons a {
+display: flex;
+align-items: center;
+text-decoration: none;
+color: var(--primary-color);
+transition: var(--transition);
+}
+
+.social-icons a:hover {
+color: var(--secondary-color);
+}
+
+
+/* Footer Styling (adjust as needed) */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--bg-color);
+}
